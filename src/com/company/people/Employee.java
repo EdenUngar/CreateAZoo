@@ -1,6 +1,6 @@
 package com.company.people;
 
-public class Employee extends People {
+public class Employee extends Person {
 
     private int employeeNumber;
     private String jobTitle;

@@ -1,6 +1,6 @@
 package com.company.people;
 
-public class Visitor extends People {
+public class Visitor extends Person {
 
     private int groupSize;
     private String allergies;
