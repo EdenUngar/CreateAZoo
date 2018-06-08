@@ -8,7 +8,7 @@ public class PeopleMenu {
     private Scanner input = new Scanner(System.in);
 
     //handles People Options
-    private void managePeople() {
+    protected void managePeople() {
 
         try {
             //find out what type of person we need to manage
@@ -27,7 +27,8 @@ public class PeopleMenu {
                     manageVisitor();
                     break;
                 case 3:
-                    mainMenu();
+                    Menu menu = new Menu();
+                    menu.mainMenu();
                     //handle going back to mainMenu()
                     break;
                 case 4:
@@ -52,11 +53,116 @@ public class PeopleMenu {
 
     //manage employees
     private void manageEmployee() {
+
+        try {
+            System.out.println("Please choose an option. " +
+                    "\n1. Add Employee" +
+                    "\n2. View Employee" +
+                    "\n3. Remove Employee" +
+                    "\n4. Go Back" +
+                    "\n5. Exit Program");
+            switch (input.nextInt()) {
+                case 1:
+                    //add employees
+                    addEmployee();
+                    break;
+                case 2:
+                    //view employees
+                    viewEmployee();
+                    break;
+                case 3:
+                    //remove employees
+                    removeEmployee();
+                    break;
+                case 4:
+                    managePeople();
+                    //go back to manage people
+                    break;
+                case 5:
+                    System.out.println("Thank you for using the Zoo Program");
+                    //exit program
+                    System.exit(0);
+                    break;
+                default:
+                    //handle incorrect inputs
+                    System.out.println("Not a valid entry. Please enter a number between 1 and 5. ");
+                    manageEmployee();
+                    break;
+            }
+
+        } catch (InputMismatchException ime) {
+            input.nextLine();
+            System.out.println("Not a valid entry. Please enter a number between 1 and 5. ");
+            //handle any input that is not an int
+        }
+
     }
+
+    //add employees
+    private void addEmployee() {
+    }
+    //view employees
+    private void viewEmployee() {
+    }
+    //remove employees
+    private void removeEmployee() {
+    }
+
+
+
 
     //manage visitors
     private void manageVisitor() {
+        try {
+            System.out.println("Please choose an option. " +
+                    "\n1. Add Visitor " +
+                    "\n2. View Visitor " +
+                    "\n3. Remove Visitor " +
+                    "\n4. Go Back " +
+                    "\n5. Exit Program ");
+            switch (input.nextInt()){
+                case 1:
+                    //add visitors
+                    addVisitor();
+                    break;
+                case 2:
+                    //view visitors
+                    viewVisitor();
+                    break;
+                case 3:
+                    //remove visitors
+                    removeVisitor();
+                    break;
+                case 4:
+                    //go back to manage people
+                    managePeople();
+                    break;
+                case 5:
+                    System.out.println("Thank you for using the Zoo Program");
+                    //exit program
+                    System.exit(0);
+                    break;
+                default:
+                    //handle invalid int inputs (or intputs)
+                    System.out.println("Not a valid entry. Please enter a number between 1 and 5. ");
+                    manageVisitor();
+                    break;
+            }
+
+        } catch (InputMismatchException ime) {
+            input.nextLine();
+            System.out.println("Not a valid entry. Please enter a number between 1 and 5. ");
+            //handle any input that is not an int
+        }
     }
+
+    private void addVisitor() {
+    }
+    private void viewVisitor() {
+    }
+    private void removeVisitor() {
+    }
+
 
     //code for Manage People -> add people, view people, and remove people instead of ^ (manage people -> employee/visitor)
 //        try{
