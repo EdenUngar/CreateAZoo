@@ -47,6 +47,7 @@ public class PeopleMenu {
             input.nextLine();
             System.out.println("Not a valid entry. Please enter a number between 1 and 4. ");
             //handle any input that is not an int
+            managePeople();
         }
     }
 
@@ -94,6 +95,7 @@ public class PeopleMenu {
             input.nextLine();
             System.out.println("Not a valid entry. Please enter a number between 1 and 5. ");
             //handle any input that is not an int
+            manageEmployee();
         }
 
     }
@@ -153,6 +155,7 @@ public class PeopleMenu {
             input.nextLine();
             System.out.println("Not a valid entry. Please enter a number between 1 and 5. ");
             //handle any input that is not an int
+            manageVisitor();
         }
     }
 
