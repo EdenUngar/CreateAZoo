@@ -26,6 +26,9 @@ public class Souvenir extends Item {
     public boolean isSeasonal() {
         return isSeasonal;
     }
-    //cannot become not seasonal
+
+    public void setSeasonal(boolean seasonal) {
+        isSeasonal = seasonal;
+    }
 
 }

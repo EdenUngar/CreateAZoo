@@ -21,7 +21,10 @@ public class Food extends Item {
     public String getExpirationDate() {
         return expirationDate;
     }
-    //expiration date cannot change
+
+    public void setExpirationDate(String expirationDate) {
+        this.expirationDate = expirationDate;
+    }
 
     public boolean isRefrigerated() {
         return isRefrigerated;

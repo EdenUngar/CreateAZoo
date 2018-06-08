@@ -41,6 +41,8 @@ public class Item {
     public String getDateReceived() {
         return dateReceived;
     }
-    //date recieved cannot change
 
+    public void setDateReceived(String dateReceived) {
+        this.dateReceived = dateReceived;
+    }
 }
