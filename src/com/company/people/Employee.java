@@ -1,5 +1,7 @@
 package com.company.people;
 
+import java.util.List;
+
 public class Employee extends Person {
 
     private int employeeNumber;
@@ -7,6 +9,12 @@ public class Employee extends Person {
     private String hireDate;
     private String hours;
 
+    //save new employees
+    private List<Employee> employeeList;
+
+
+
+    //constructor
     public Employee(int age, String name, char gender, String race, int employeeNumber, String jobTitle, String hireDate) {
         super(age, name, gender, race);
         this.employeeNumber = employeeNumber;
@@ -14,6 +22,7 @@ public class Employee extends Person {
         this.hireDate = hireDate;
     }
 
+    //getters and setters
     public int getEmployeeNumber() {
         return employeeNumber;
     }
@@ -39,4 +48,8 @@ public class Employee extends Person {
     public void setHours(String hours) {
         this.hours = hours;
     }
+
+
 }
+
+

@@ -1,5 +1,8 @@
 package com.company.menu;
 
+import com.company.people.Employee;
+import com.company.people.Visitor;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -67,6 +70,7 @@ public class PeopleMenu {
             switch (input.nextInt()) {
                 case 1:
                     //add/create employees
+                    createPerson(1);
                     break;
                 case 2:
                     //view employees
@@ -119,6 +123,7 @@ public class PeopleMenu {
             switch (input.nextInt()){
                 case 1:
                     //add visitors
+                    createPerson(2);
                     break;
                 case 2:
                     //view visitors
@@ -134,7 +139,7 @@ public class PeopleMenu {
                     managePeople();
                     break;
                 case 6:
-                    System.out.println("Thank you for using the Zoo Program");
+                    System.out.println("Thank you for using the Zoo Program. ");
                     //exit program
                     System.exit(0);
                     break;
@@ -152,10 +157,6 @@ public class PeopleMenu {
             manageVisitor();
         }
     }
-
-
-
-
     //code for Manage People -> add people, view people, and remove people instead of ^ (manage people -> employee/visitor)
 //        try{
 //            System.out.println("Please choose an option. " +
@@ -207,5 +208,58 @@ public class PeopleMenu {
 //    private void removePeople() {
 //    }
 
+
+    private void createPerson(int location) {
+
+        //if location == 1 new employee
+        //if location == 2 new visitor
+
+        if (location == 1){
+
+            //find employee age
+            System.out.println("What is the employee's age? ");
+            int employeeAge = input.nextInt();
+            input.nextLine();
+            System.out.println("What is the employee's name? ");
+            String employeeName = input.nextLine();
+            System.out.println("What is the employee's gender? ");
+            char employeeGender = input.nextLine().charAt(0);
+            System.out.println("What is the employee's race? ");
+            String employeeRace = input.nextLine();
+            System.out.println("What is the employee's employee number? ");
+            int employeeNumber = input.nextInt();
+            input.nextLine();
+            System.out.println("What is the employee's job title? ");
+            String employeeTitle = input.nextLine();
+            System.out.println("What is the employee's hire date? ");
+            String employeeHireDate = input.nextLine();
+
+            Employee newEmployee = new Employee(employeeAge, employeeName, employeeGender, employeeRace, employeeNumber, employeeTitle, employeeHireDate);
+
+        }
+
+        else if (location == 2){
+
+            System.out.println("What is the visitor's age? ");
+            int visitorAge = input.nextInt();
+            input.nextLine();
+            System.out.println("What is the visitor's name? ");
+            String visitorName = input.nextLine();
+            System.out.println("What is the visitor's gender? ");
+            char visitorGender = input.nextLine().charAt(0);
+            System.out.println("What is the visitor's race? ");
+            String visitorRace = input.nextLine();
+            System.out.println("How big is the visitor's group? ");
+            int visitorGroupSize = input.nextInt();
+            input.nextLine();
+            System.out.println("Does the visitor have a membership? ");
+            //need boolean hasMembership
+            System.out.println("What is the visitor's home address?");
+            String visitorHomeAddress = input.nextLine();
+
+            Visitor newVisitor = new Visitor();
+        }
+
+    }
 
 }
