@@ -236,6 +236,7 @@ public class PeopleMenu {
 
             Employee newEmployee = new Employee(employeeAge, employeeName, employeeGender, employeeRace, employeeNumber, employeeTitle, employeeHireDate);
 
+            // TODO add employee to employee list
         }
 
         else if (location == 2){
@@ -253,7 +254,8 @@ public class PeopleMenu {
             int visitorGroupSize = input.nextInt();
             input.nextLine();
             System.out.println("Does the visitor have a membership? ");
-            //need boolean hasMembership
+//           TODO add boolean hasMembership
+//            boolean visitorHasMembership = input.nextBoolean();
             System.out.println("What is the visitor's home address?");
             String visitorHomeAddress = input.nextLine();
 

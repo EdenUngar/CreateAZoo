@@ -14,6 +14,11 @@ public class Person {
         this.race = race;
     }
 
+    //default constructor
+    public Person() { }
+
+
+
     public int getAge() {
         return age;
     }
