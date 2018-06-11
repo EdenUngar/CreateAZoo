@@ -56,58 +56,50 @@ public class PeopleMenu {
     private void manageEmployee() {
 
         try {
-            System.out.println("Please choose an option. " +
+            System.out.println("You are in the Employee Menu. " +
+                    "\nPlease choose an option. " +
                     "\n1. Add Employee" +
                     "\n2. View Employee" +
                     "\n3. Remove Employee" +
-                    "\n4. Go Back" +
-                    "\n5. Exit Program");
+                    "\n4. Edit Employee" +
+                    "\n5. Go Back" +
+                    "\n6. Exit Program");
             switch (input.nextInt()) {
                 case 1:
-                    //add employees
-                    addEmployee();
+                    //add/create employees
                     break;
                 case 2:
                     //view employees
-                    viewEmployee();
                     break;
                 case 3:
                     //remove employees
-                    removeEmployee();
                     break;
                 case 4:
+                    //edit employees
+                    break;
+                case 5:
                     managePeople();
                     //go back to manage people
                     break;
-                case 5:
+                case 6:
                     System.out.println("Thank you for using the Zoo Program");
                     //exit program
                     System.exit(0);
                     break;
                 default:
                     //handle incorrect inputs
-                    System.out.println("Not a valid entry. Please enter a number between 1 and 5. ");
+                    System.out.println("Not a valid entry. Please enter a number between 1 and 6. ");
                     manageEmployee();
                     break;
             }
 
         } catch (InputMismatchException ime) {
             input.nextLine();
-            System.out.println("Not a valid entry. Please enter a number between 1 and 5. ");
+            System.out.println("Not a valid entry. Please enter a number between 1 and 6. ");
             //handle any input that is not an int
             manageEmployee();
         }
 
-    }
-
-    //add employees
-    private void addEmployee() {
-    }
-    //view employees
-    private void viewEmployee() {
-    }
-    //remove employees
-    private void removeEmployee() {
     }
 
 
@@ -116,55 +108,52 @@ public class PeopleMenu {
     //manage visitors
     private void manageVisitor() {
         try {
-            System.out.println("Please choose an option. " +
+            System.out.println("You are in the Visitor Menu. " +
+                    "\nPlease choose an option. " +
                     "\n1. Add Visitor " +
                     "\n2. View Visitor " +
                     "\n3. Remove Visitor " +
-                    "\n4. Go Back " +
-                    "\n5. Exit Program ");
+                    "\n4. Edit Visitor" +
+                    "\n5. Go Back " +
+                    "\n6. Exit Program ");
             switch (input.nextInt()){
                 case 1:
                     //add visitors
-                    addVisitor();
                     break;
                 case 2:
                     //view visitors
-                    viewVisitor();
                     break;
                 case 3:
                     //remove visitors
-                    removeVisitor();
                     break;
                 case 4:
+                    //edit visitors
+                    break;
+                case 5:
                     //go back to manage people
                     managePeople();
                     break;
-                case 5:
+                case 6:
                     System.out.println("Thank you for using the Zoo Program");
                     //exit program
                     System.exit(0);
                     break;
                 default:
                     //handle invalid int inputs (or intputs)
-                    System.out.println("Not a valid entry. Please enter a number between 1 and 5. ");
+                    System.out.println("Not a valid entry. Please enter a number between 1 and 6. ");
                     manageVisitor();
                     break;
             }
 
         } catch (InputMismatchException ime) {
             input.nextLine();
-            System.out.println("Not a valid entry. Please enter a number between 1 and 5. ");
+            System.out.println("Not a valid entry. Please enter a number between 1 and 6. ");
             //handle any input that is not an int
             manageVisitor();
         }
     }
 
-    private void addVisitor() {
-    }
-    private void viewVisitor() {
-    }
-    private void removeVisitor() {
-    }
+
 
 
     //code for Manage People -> add people, view people, and remove people instead of ^ (manage people -> employee/visitor)
